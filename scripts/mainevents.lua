@@ -46,9 +46,9 @@ function playerSpawnCredentials(playerid)
     -- set player stuff
     print("Player " .. getPlayerName(playerid) .. "(" .. playerid .. ") credentials arrived")
     sendMsgToAll("Are you guys ready? " .. getPlayerName(playerid) .. " has joined the server", 0xFFFF0000)
-    sendPlayerMsg(playerid, "Welcome to Goodfellas deathmatch server", 0xFFFFFFFF)
-    sendPlayerMsg(playerid, "This mode works as follows...", 0xFFFFFFFF)
-    sendPlayerMsg(playerid, "With every 5 kills, you gain a new weapon", 0xFFFFFFFF)
+    sendPlayerMsg(playerid, "Welcome To IV:MP Deathmatch", 0xFFFFFFFF)
+    sendPlayerMsg(playerid, "The Server Works As Follows:", 0xFFFFFFFF)
+    sendPlayerMsg(playerid, "With Every 5 Kills, You Gain A New Weapon", 0xFFFFFFFF)
 
     local randomSpawn = spawns[math.random(1, #spawns)]
 	spawnPlayer(playerid, randomSpawn.x, randomSpawn.y, randomSpawn.z)
@@ -81,7 +81,7 @@ function playerCommand(playerid, text)
         end
     end
 
-    sendPlayerMsg(playerid, "Unknown cmd, what are you trying to do?", 0xFFFFFFFF)
+    sendPlayerMsg(playerid, "Command Unknown", 0xFFFFFFFF)
 end
 registerEvent("playerCommand", "onPlayerCommand")
 
